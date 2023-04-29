@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class Shooter : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    /*
+    void OnTriggerEnter(Collision collision)
     {
         if (collision.gameObject.tag == "tarjet")
         {
             Debug.Log("hola");
+            Destroy(collision.gameObject);
+        }
+    }
+    */
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "tarjet")
+        {
+            Debug.Log("Trieger");
+            Destroy(other.gameObject);
+        }
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "tarjet")
+        {
+            Debug.Log("collider");
             Destroy(collision.gameObject);
         }
     }
