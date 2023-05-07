@@ -2022,6 +2022,7 @@ GameObject:
   - component: {fileID: 1272664293}
   - component: {fileID: 1272664292}
   - component: {fileID: 1272664291}
+  - component: {fileID: 1272664295}
   m_Layer: 0
   m_Name: tarjet
   m_TagString: tarjet
@@ -2107,6 +2108,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 21.324, z: 0}
+--- !u!114 &1272664295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272664290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a79847939ca1324a9e086b809b99694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 922817922}
 --- !u!1 &1561965902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2779,7 +2793,10 @@ MonoBehaviour:
   theEnemy: {fileID: 1272664290}
   xPos: 0
   zPos: 0
-  enemyCunt: 0
+  timeSpawn: 2
+  enemyCunt: 4
+  distance: 4
+  minDist: 2
 --- !u!1 &1944279480
 GameObject:
   m_ObjectHideFlags: 0
