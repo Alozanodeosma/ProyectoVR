@@ -2794,7 +2794,7 @@ MonoBehaviour:
   xPos: 0
   zPos: 0
   timeSpawn: 2
-  enemyCunt: 4
+  enemyCunt: 10
   distance: 4
   minDist: 2
 --- !u!1 &1944279480
