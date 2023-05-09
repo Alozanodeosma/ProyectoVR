@@ -15,7 +15,8 @@ public class ComportamientoBala : MonoBehaviour
         if (other.gameObject.tag == "tarjet")
         {
             Debug.Log("Trieger");
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -23,7 +24,8 @@ public class ComportamientoBala : MonoBehaviour
         if (collision.gameObject.tag == "tarjet")
         {
             Debug.Log("collider");
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 }
