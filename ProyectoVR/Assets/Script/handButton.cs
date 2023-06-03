@@ -33,7 +33,7 @@ public class handButton : XRBaseInteractable
 
     private void StratPress(XRBaseInteractor interactor)
     {
-        Debug.Log("hola");
+        //Debug.Log("hola");
         enemySpawner.Start();
         hoverInteractor = interactor;
         previousHandleHeight = GetlocalYPosition(hoverInteractor.transform.position);

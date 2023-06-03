@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - tarjet
+  - leftHand
+  - rightHand
+  - Magazine
   layers:
   - Default
   - TransparentFX
@@ -14,8 +17,8 @@ TagManager:
   - UI
   - Hide
   - 
-  - 
-  - 
+  - GrabInteractable
+  - Player
   - 
   - 
   - 
