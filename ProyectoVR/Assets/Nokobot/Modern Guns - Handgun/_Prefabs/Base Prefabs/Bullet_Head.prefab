@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,10 +43,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.0025
-  m_Height: 0.008
+  m_Radius: 0.0050277724
+  m_Height: 0.012667053
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.004}
+  m_Center: {x: 0, y: 0.000101211015, z: 0.002478029}
 --- !u!54 &8403992145370945202
 Rigidbody:
   m_ObjectHideFlags: 0
