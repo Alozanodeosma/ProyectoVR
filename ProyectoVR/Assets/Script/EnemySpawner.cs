@@ -19,38 +19,79 @@ public class EnemySpawner : MonoBehaviour
     public int enemyCunt;
     public int distance = 4;
     public int minDist = 2;
+    bool firstTime = true;
+    private int[] xPosArray;
+    private int[] zPosArray;
 
-
+    List<GameObject> list = new List<GameObject>();
     //solo funciona character en 0
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        if (minDist > distance)
+        if (firstTime)
         {
-            Debug.LogError("Distancia minima menor que maxima");
+            if (minDist > distance)
+            {
+                Debug.LogError("Distancia minima menor que maxima");
+            }
+            else
+            {
+                StartCoroutine(EnemyDrop());
+            }
         }
         else
         {
-            StartCoroutine(EnemyDrop());
+            StartCoroutine(EnemyPlace());
+        }
+
+    }
+
+
+
+
+    IEnumerator EnemyPlace()
+    {
+        foreach (GameObject item in list)
+        {
+            item.SetActive(true);
+            yield return new WaitForSeconds(timeSpawn);
         }
        
     }
+
     IEnumerator EnemyDrop()
     {
+        int[] xPosArray = new int[enemyCunt];
+        int[] zPosArray = new int[enemyCunt];
 
-        for(int i = 0; i<enemyCunt;i++)
+
+        for (int i = 0; i<enemyCunt;i++)
         {
 
             do
             {
                 xPos = Random.Range(-distance, distance);
+                
                 zPos = Random.Range(-distance, distance);
+                
             } while (xPos >= -minDist && xPos <= minDist && zPos >= -minDist && zPos <= minDist);
-
-            Instantiate(theEnemy, new Vector3(xPos, 0.50f, zPos), Quaternion.identity);
+            xPosArray[i] = xPos;
+            zPosArray[i] = zPos;
+            list.Add(Instantiate(theEnemy, new Vector3(xPos, 0.50f, zPos), Quaternion.identity));
             yield return new WaitForSeconds(timeSpawn);
         }
+
+        firstTime = false;
+        yield return new WaitForSeconds(timeSpawn);
+
+
+        foreach (GameObject item in list){
+            item.SetActive(false);
+        }
+            
     }
+
+
     public void OnDrawGizmosSelected()
     {
         Gizmos.color= Color.green;
