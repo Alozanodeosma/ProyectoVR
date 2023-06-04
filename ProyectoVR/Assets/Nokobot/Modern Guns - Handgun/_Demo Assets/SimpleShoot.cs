@@ -67,7 +67,7 @@ public class SimpleShoot : MonoBehaviour
 
     public void PullTheTrigger()
     {
-        if (magazine && magazine.numberOfBulets > 0 && hasSlide)
+        if (magazine && magazine.numberOfBulets > 0 && hasSlide && !Player.Play)
         {
             gunAnimator.SetTrigger("Fire");
         }

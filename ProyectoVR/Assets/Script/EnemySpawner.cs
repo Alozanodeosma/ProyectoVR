@@ -14,8 +14,9 @@ public class EnemySpawner : MonoBehaviour
     public int xPos;
     public int zPos;
     [SerializeField] private float timeSpawn = 2;
-    
+    private TimeManager timemanager;
 
+    public static int enemigosDerrotados = 0;
     public int enemyCunt;
     public int distance = 4;
     public int minDist = 2;
@@ -28,6 +29,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        timemanager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
         if (firstTime)
         {
             if (minDist > distance)
@@ -46,15 +48,23 @@ public class EnemySpawner : MonoBehaviour
 
     }
 
-
+    public void Update()
+    {
+        if (enemigosDerrotados >=enemyCunt)
+        {
+            Debug.Log("CAMBIANDOeSCENA");
+        }
+    }
 
 
     IEnumerator EnemyPlace()
     {
+        timemanager.ContinueTime();
+        Player.Play = true;
         foreach (GameObject item in list)
         {
             item.SetActive(true);
-            yield return new WaitForSeconds(timeSpawn);
+            yield return new WaitForSeconds(0);
         }
        
     }
@@ -77,7 +87,7 @@ public class EnemySpawner : MonoBehaviour
             } while (xPos >= -minDist && xPos <= minDist && zPos >= -minDist && zPos <= minDist);
             xPosArray[i] = xPos;
             zPosArray[i] = zPos;
-            list.Add(Instantiate(theEnemy, new Vector3(xPos, 0.50f, zPos), Quaternion.identity));
+            list.Add(Instantiate(theEnemy, new Vector3(xPos, 0.6f, zPos), Quaternion.identity));
             yield return new WaitForSeconds(timeSpawn);
         }
 

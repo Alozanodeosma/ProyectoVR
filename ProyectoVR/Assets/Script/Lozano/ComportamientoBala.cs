@@ -8,14 +8,19 @@ public class ComportamientoBala : MonoBehaviour
     public float tiempoDesaparicion=4;
     public void Awake()
     {
-        Destroy(gameObject, tiempoDesaparicion);
+        if (Player.Play)
+        {
+            Destroy(gameObject, tiempoDesaparicion);
+        }
+       
     }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "tarjet")
         {
-            Debug.Log("Trieger");
+            //Debug.Log("Trieger");
             //Destroy(other.gameObject);
+            EnemySpawner.enemigosDerrotados++;
             other.gameObject.SetActive(false);
         }
     }
@@ -23,8 +28,9 @@ public class ComportamientoBala : MonoBehaviour
     {
         if (collision.gameObject.tag == "tarjet")
         {
-            Debug.Log("collider");
+            //Debug.Log("collider");
             //Destroy(collision.gameObject);
+            EnemySpawner.enemigosDerrotados++;
             collision.gameObject.SetActive(false);
         }
     }
