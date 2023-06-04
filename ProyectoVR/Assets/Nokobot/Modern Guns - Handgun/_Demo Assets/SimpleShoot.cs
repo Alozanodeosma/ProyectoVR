@@ -115,6 +115,8 @@ public class SimpleShoot : MonoBehaviour
 
         // Create a bullet and add force on it in direction of the barrel
         Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
+
+
         //intendo de destrur bala
         //Destroy(bulletPrefab, tiempoDesaparicion);
 
