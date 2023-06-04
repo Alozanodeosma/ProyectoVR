@@ -8,6 +8,8 @@ TagManager:
   - leftHand
   - rightHand
   - Magazine
+  - Fire
+  - TimeManager
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - 
   - GrabInteractable
   - Player
-  - 
+  - IgnoreGrayscale
   - 
   - 
   - 

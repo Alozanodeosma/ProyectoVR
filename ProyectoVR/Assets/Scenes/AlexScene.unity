@@ -787,6 +787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492216114}
+  - component: {fileID: 492216118}
   - component: {fileID: 492216117}
   - component: {fileID: 492216116}
   - component: {fileID: 492216115}
@@ -952,6 +953,24 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &492216118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492216113}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b935ffb6441b8ab4fadbdd3990604c6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: daf9781cad112c75d0008dfa8d76c639, type: 3}
+  textureRamp: {fileID: 0}
+  excludeLayers:
+    serializedVersion: 2
+    m_Bits: 1280
+  rampOffset: 0
 --- !u!1 &502167229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,6 +2091,51 @@ Transform:
   m_Father: {fileID: 2124743683}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &865570088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 865570090}
+  - component: {fileID: 865570089}
+  m_Layer: 0
+  m_Name: TimeManager
+  m_TagString: TimeManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &865570089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865570088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01cc64c18b257234bbc7da33f058ebcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeIsStopped: 0
+--- !u!4 &865570090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865570088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5600116, y: 0.6623165, z: 0.6060344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &922817919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,6 +2147,7 @@ GameObject:
   - component: {fileID: 922817922}
   - component: {fileID: 922817921}
   - component: {fileID: 922817920}
+  - component: {fileID: 922817923}
   m_Layer: 9
   m_Name: XR Origin
   m_TagString: Player
@@ -2137,6 +2202,20 @@ Transform:
   m_Father: {fileID: 546514458}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &922817923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922817919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65450453c6d65ba4592e05ce4f0b9e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Grayscale: {fileID: 492216118}
+  myActionsAsset: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!1 &974736872
 GameObject:
   m_ObjectHideFlags: 0
@@ -3629,6 +3708,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1944279481}
+    - target: {fileID: 2519554393964473289, guid: d29fbacc56844ab429d355842d1690c3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2519554394648229273, guid: d29fbacc56844ab429d355842d1690c3, type: 3}
       propertyPath: magazine
       value: 
@@ -3637,13 +3720,25 @@ PrefabInstance:
       propertyPath: m_StartingSelectedInteractable
       value: 
       objectReference: {fileID: 669867312722265958}
+    - target: {fileID: 3332417032218662765, guid: d29fbacc56844ab429d355842d1690c3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3332417032220592561, guid: d29fbacc56844ab429d355842d1690c3, type: 3}
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 1944279481}
+    - target: {fileID: 5229922184398557432, guid: d29fbacc56844ab429d355842d1690c3, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6052951282048411272, guid: d29fbacc56844ab429d355842d1690c3, type: 3}
       propertyPath: m_Name
       value: M1911 Handgun_Black (Shooting)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053719032407877768, guid: d29fbacc56844ab429d355842d1690c3, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6059368135800668414, guid: d29fbacc56844ab429d355842d1690c3, type: 3}
       propertyPath: m_RootOrder
