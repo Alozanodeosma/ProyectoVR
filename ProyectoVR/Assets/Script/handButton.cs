@@ -4,10 +4,14 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
+using TMPro;
+
 //https://www.youtube.com/watch?v=pmRwhE2hQ9g
 public class handButton : XRBaseInteractable
 {
     public UnityEvent OnPress = null;
+
+    private bool pressed = false;
 
     private float yMin = 0.0f;
     private float yMax = 0.0f;
@@ -17,6 +21,9 @@ public class handButton : XRBaseInteractable
     private XRBaseInteractor hoverInteractor = null;
 
     public EnemySpawner enemySpawner;
+
+    public TextMeshProUGUI playButton;
+    public TextMeshProUGUI prepButton;
 
     protected override void Awake()
     {
@@ -33,19 +40,32 @@ public class handButton : XRBaseInteractable
 
     private void StratPress(XRBaseInteractor interactor)
     {
-        Debug.Log("hola");
-        enemySpawner.Start();
-        hoverInteractor = interactor;
-        previousHandleHeight = GetlocalYPosition(hoverInteractor.transform.position);
+
+        if (!pressed)
+        {
+
+            //Debug.Log("hola");
+            playButton.enabled = true;
+            prepButton.enabled = false;
+
+            enemySpawner.Start();
+            hoverInteractor = interactor;
+            previousHandleHeight = GetlocalYPosition(hoverInteractor.transform.position);
+            pressed= true;
+        }
+
     }
 
     private void EndPress(XRBaseInteractor interactor)
     {
+
+        //Debug.Log("abajo");
         hoverInteractor = null;
         previousHandleHeight = 0.0f;
 
         previousPress = false;
         SetYPosition(yMax);
+        
     }
 
     private void Start()
