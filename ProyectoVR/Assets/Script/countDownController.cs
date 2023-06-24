@@ -17,6 +17,13 @@ public class countDownController : MonoBehaviour
     [SerializeField]
     public GameObject rightHand;
 
+
+
+    [SerializeField]
+    public GameObject leftRay;
+    [SerializeField]
+    public GameObject rightRay;
+
     private TimeManager timemanager;
     public TextMeshProUGUI prepButton;
 
@@ -30,6 +37,12 @@ public class countDownController : MonoBehaviour
         rightHand = GameObject.FindGameObjectWithTag("rightHand");
         leftHand.SetActive(false);
         rightHand.SetActive(false);
+
+        leftRay = GameObject.FindGameObjectWithTag("leftHand");
+        rightRay = GameObject.FindGameObjectWithTag("rightHand");
+
+        leftRay.SetActive(false);
+        rightRay.SetActive(false);
 
 
         timemanager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
@@ -49,6 +62,10 @@ public class countDownController : MonoBehaviour
             Invoke("RemoveText", 1f);
             leftHand.SetActive(true);
             rightHand.SetActive(true);
+
+
+            leftRay.SetActive(true);
+            rightRay.SetActive(true);
 
             Player.Play = false;
             prepButton.enabled = true;
