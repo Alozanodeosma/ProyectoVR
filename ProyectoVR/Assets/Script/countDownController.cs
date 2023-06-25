@@ -12,6 +12,7 @@ public class countDownController : MonoBehaviour
     private int truncalTime;
     public TextMeshProUGUI cuntDisplay;
 
+
     [SerializeField]
     public GameObject leftHand;
     [SerializeField]
@@ -23,6 +24,13 @@ public class countDownController : MonoBehaviour
     public GameObject leftRay;
     [SerializeField]
     public GameObject rightRay;
+
+
+
+    [SerializeField]
+    public GameObject leftTelepoprt;
+    [SerializeField]
+    public GameObject rightTeleport;
 
     private TimeManager timemanager;
     public TextMeshProUGUI prepButton;
@@ -38,11 +46,19 @@ public class countDownController : MonoBehaviour
         leftHand.SetActive(false);
         rightHand.SetActive(false);
 
+        leftTelepoprt = GameObject.FindGameObjectWithTag("leftHand");
+        rightTeleport = GameObject.FindGameObjectWithTag("rightHand");
+        leftTelepoprt.SetActive(false);
+        rightTeleport.SetActive(false);
+
         leftRay = GameObject.FindGameObjectWithTag("leftHand");
         rightRay = GameObject.FindGameObjectWithTag("rightHand");
 
         leftRay.SetActive(false);
         rightRay.SetActive(false);
+
+        //leftRay.SetActive(false);
+        //rightRay.SetActive(false);
 
 
         timemanager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
@@ -63,6 +79,8 @@ public class countDownController : MonoBehaviour
             leftHand.SetActive(true);
             rightHand.SetActive(true);
 
+            leftTelepoprt.SetActive(true);
+            rightTeleport.SetActive(true);
 
             leftRay.SetActive(true);
             rightRay.SetActive(true);
