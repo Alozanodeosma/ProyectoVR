@@ -14,6 +14,8 @@ public class Shooter : MonoBehaviour
         }
     }
     */
+
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "tarjet")
@@ -21,6 +23,7 @@ public class Shooter : MonoBehaviour
             Debug.Log("Trieger");
             //Destroy(other.gameObject);
             other.gameObject.SetActive(false);
+            EnemySpawner.enemigosDerrotados++;
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -30,6 +33,9 @@ public class Shooter : MonoBehaviour
             Debug.Log("collider");
             //Destroy(collision.gameObject);
             collision.gameObject.SetActive(false);
+            EnemySpawner.enemigosDerrotados++;
+
+
         }
     }
 }

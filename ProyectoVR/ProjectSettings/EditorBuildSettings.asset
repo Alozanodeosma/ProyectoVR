@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AlexScene.unity
     guid: 6f69c8774eb8cc2479c1176dbfd538ca
+  - enabled: 1
+    path: Assets/Scenes/AlexScene 1.unity
+    guid: deab8ad06147ae04f9a576ec1345d933
+  - enabled: 1
+    path: Assets/Scenes/AlexScene 2.unity
+    guid: 9a3f4c4611f0540449e7f1a2cc810f39
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 868569a63f4aa8242b007b03a44a6ae3, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4efe9107a4d145a49853d98ec8c4f88a, type: 2}

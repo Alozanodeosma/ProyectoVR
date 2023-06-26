@@ -16,13 +16,20 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float timeSpawn = 2;
     private TimeManager timemanager;
 
+    public Canvas canvasWin;
+
     public static int enemigosDerrotados = 0;
+
     public int enemyCunt;
     public int distance = 4;
     public int minDist = 2;
     bool firstTime = true;
     private int[] xPosArray;
     private int[] zPosArray;
+
+
+    public AudioSource source;
+    public AudioClip Win;
 
     List<GameObject> list = new List<GameObject>();
     //solo funciona character en 0
@@ -52,7 +59,10 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemigosDerrotados >=enemyCunt)
         {
-            Debug.Log("CAMBIANDOeSCENA");
+            Debug.Log("U WIN");
+            canvasWin.gameObject.SetActive(true);
+            source.PlayOneShot(Win);
+            enemigosDerrotados = 0;
         }
     }
 
