@@ -12,16 +12,18 @@ public class Explosion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Claymore= GetComponent<SphereCollider>();
+       
+        Claymore = GetComponent<SphereCollider>();
         //ClaymoreVisible = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if(handButton.Explotar == true)
+        
+        if (handButton.Explotar == true)
         {
+            
             Claymore.radius = 15;
             Exp.SetActive(true);
             ClaymoreVisible.GetComponent<MeshRenderer>().enabled = false;

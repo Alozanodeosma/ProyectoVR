@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.Interaction.Toolkit;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
@@ -54,6 +55,10 @@ public class SimpleShoot : MonoBehaviour
     }
     void Start()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            Player.Play = false;
+        }
         if (barrelLocation == null)
             barrelLocation = transform;
 
