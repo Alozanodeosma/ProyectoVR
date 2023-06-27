@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 23
+  controlID: 30
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 603
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 314
     height: 603
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,14 +120,14 @@ MonoBehaviour:
     y: 603
     width: 1317
     height: 344
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,8 +268,8 @@ MonoBehaviour:
     y: 0
     width: 1003
     height: 603
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -462,36 +462,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/prefab/claymore-mine/source/model/model
+    - Assets/Script/StopTime
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/prefab/claymore-mine/source/model/model
+  - Assets/Script/StopTime
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\uni\2022\VR\PROYECTOS\ProyectoVR\ProyectoVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 53}
-    m_SelectedIDs: 388a0200
-    m_LastClickedID: 166456
-    m_ExpandedIDs: 00000000186c00001a6c00001c6c00001e6c0000206c0000246c0000266c00006e700000a2870200a4870200388a0200468a020000ca9a3b
+    m_SelectedIDs: 68910000
+    m_LastClickedID: 37224
+    m_ExpandedIDs: 00000000f88f0000fa8f0000fc8f0000fe8f000000900000029000000490000006900000089000000a900000249100003091000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: SampleScenes
-      m_OriginalName: SampleScenes
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 28786
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -505,7 +505,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000186c00001a6c00001c6c00001e6c0000206c0000226c0000246c0000266c0000
+    m_ExpandedIDs: 00000000f88f0000fa8f0000fc8f0000fe8f000000900000029000000490000006900000089000000a900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -633,20 +633,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 5089f9ff8a69faff72d4faffe4e5faff7ef1faff7af7faffd619fbff048ffbffecb1fbff4ad6fbff3efbfbffee1efcffe246fcffb46dfcff5692fcff86b5fcff36d9fcff8efbfcff381efdff9040fdffe862fdffb686fdffbcacfdff84cffdff04f3fdffc817feff7e3bfeffdc5dfeff3a80feffaca3feff0ac6feff60e8fefff0eafeff4e0dffffc42fffff4a52ffff4e5affff6af2ffff52f3ffff02f8ffff30fbffff147100002271000050710000727100007c2d0200ca2d0200b42e0200022f02007431020096330200e4330200ce3402001c3502003e3702008c370200563d0200a43d0200c63f0200144002003642020084420200a6440200f44402001647020064470200c24a0200104b0200fa4b0200484c0200b84e0200f8890200c68a0400
+      m_SelectedIDs: d0680000
+      m_LastClickedID: 26832
+      m_ExpandedIDs: 66e9ffff7ce9ffff1cf5ffff28f5ffff5af5ffff7af5ffff2cf6ffff4af6ffff30fbffffb4680000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: model
-        m_OriginalName: model
+        m_Name: gamecontroller
+        m_OriginalName: gamecontroller
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -338830
+        m_UserData: 26838
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -884,9 +884,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.5454026, y: 0.7963846, z: 0.60423166}
+    m_Target: {x: 0.20111316, y: 0.4968055, z: 0.5708202}
     speed: 2
-    m_Value: {x: 0.5454026, y: 0.7963846, z: 0.60423166}
+    m_Value: {x: 0.20111316, y: 0.4968055, z: 0.5708202}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -933,13 +933,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.15031186, y: -0.15145844, z: 0.021663051, w: -0.9770417}
+    m_Target: {x: -0.1054656, y: 0.8038236, z: -0.153062, w: -0.5656282}
     speed: 2
-    m_Value: {x: -0.1517307, y: -0.15137933, z: 0.021883778, w: -0.9765159}
+    m_Value: {x: -0.10497347, y: 0.8052678, z: -0.15333028, w: -0.56304}
   m_Size:
-    m_Target: 0.8333023
+    m_Target: 1.0291177
     speed: 2
-    m_Value: 0.8333023
+    m_Value: 1.0291177
   m_Ortho:
     m_Target: 0
     speed: 2
