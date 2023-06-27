@@ -2863,6 +2863,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1940841050018224430, guid: 8992642176fe13440a08ec865947f0bc, type: 3}
   m_PrefabInstance: {fileID: 1940841048606776702}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1583597724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3290390591562841193, guid: 86577e061955a0e46ab78f2c0d8945c4, type: 3}
+  m_PrefabInstance: {fileID: 6551212778771554961}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1611977477 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6551212777161716116, guid: 86577e061955a0e46ab78f2c0d8945c4, type: 3}
@@ -3550,6 +3555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: model
       objectReference: {fileID: 0}
+    - target: {fileID: 2420535765928862353, guid: 500fc429fa6f2134cb2e3de293e9832d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3088529093438814251, guid: 500fc429fa6f2134cb2e3de293e9832d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3684,6 +3693,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1771988592}
     m_Modifications:
+    - target: {fileID: 1567654524581836060, guid: 8992642176fe13440a08ec865947f0bc, type: 3}
+      propertyPath: teleport
+      value: 
+      objectReference: {fileID: 1583597724}
     - target: {fileID: 1940841048653609388, guid: 8992642176fe13440a08ec865947f0bc, type: 3}
       propertyPath: teleport
       value: 

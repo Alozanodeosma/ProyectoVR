@@ -25,6 +25,8 @@ public class handButton : XRBaseInteractable
     public TextMeshProUGUI playButton;
     public TextMeshProUGUI prepButton;
 
+    public static bool Explotar = false;
+
     protected override void Awake()
     {
         base.Awake();
@@ -47,7 +49,7 @@ public class handButton : XRBaseInteractable
             //Debug.Log("hola");
             playButton.enabled = true;
             prepButton.enabled = false;
-
+            Explotar = true;
             enemySpawner.Start();
             hoverInteractor = interactor;
             previousHandleHeight = GetlocalYPosition(hoverInteractor.transform.position);
@@ -62,7 +64,7 @@ public class handButton : XRBaseInteractable
         //Debug.Log("abajo");
         hoverInteractor = null;
         previousHandleHeight = 0.0f;
-
+        Explotar = false;
         previousPress = false;
         SetYPosition(yMax);
         
