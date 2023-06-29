@@ -3305,9 +3305,9 @@ MonoBehaviour:
   theEnemy: {fileID: 7979691740016643108, guid: ad6d5b1a67309e14e92925c864b1902b, type: 3}
   xPos: 0
   zPos: 0
-  timeSpawn: 2
+  timeSpawn: 3
   canvasWin: {fileID: 1528837395}
-  enemyCunt: 1
+  enemyCunt: 3
   distance: 4
   minDist: 2
   source: {fileID: 1528837396}

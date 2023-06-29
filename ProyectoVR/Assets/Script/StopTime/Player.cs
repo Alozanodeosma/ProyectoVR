@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityStandardAssets.ImageEffects;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 public class Player : MonoBehaviour
 {
     private TimeManager timemanager;
@@ -37,6 +39,10 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            EnemySpawner.enemigosDerrotados = 0;
+        }
         //if (GrabGun.WasPerformedThisFrame())
         //{
         //    rayGrab.SetActive(false);

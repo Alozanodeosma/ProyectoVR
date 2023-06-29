@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject theEnemy;
     public int xPos;
     public int zPos;
-    [SerializeField] private float timeSpawn = 2;
+    [SerializeField] private float timeSpawn;
     private TimeManager timemanager;
 
     public Canvas canvasWin;
@@ -36,6 +36,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        enemigosDerrotados = 0;
         timemanager = GameObject.FindGameObjectWithTag("TimeManager").GetComponent<TimeManager>();
         if (firstTime)
         {

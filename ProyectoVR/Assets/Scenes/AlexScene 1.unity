@@ -3307,7 +3307,7 @@ MonoBehaviour:
   zPos: 0
   timeSpawn: 2
   canvasWin: {fileID: 1528837395}
-  enemyCunt: 3
+  enemyCunt: 2
   distance: 4
   minDist: 2
   source: {fileID: 1528837396}
